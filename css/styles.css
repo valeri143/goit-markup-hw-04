@@ -46,7 +46,7 @@ img{
    
     display: flex;
   border-bottom: var(--primary-color);  
- 
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 
 }
 .head{
@@ -110,22 +110,18 @@ text-decoration: none;
     color: var(--brand-color);
 }
 /* main */
-.container.primary{
-    height: 603px;
-    align-items: center;
-     background: var(--primary-color); 
-    opacity: 0.7;
-    background-image: url(../images/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+.primary{
     padding-top: 192px;
     padding-bottom: 192px;
-  
-
-}
-.primary{
-    background-color: var(--primary-color);
-    
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 603px;
+    align-items: center;
+    background-repeat: no-repeat;
+     background: #2E2F42; 
+    opacity: 70%; 
+    background-image:url(../images/hero.jpg), linear-gradient(#2E2F42 75%, #000000 25%);
+    background-size: cover;
 }
 .primary-tittle{
     margin: 0 auto;
@@ -171,7 +167,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     display: flex;
     
 }
-
 .icon{
     margin-bottom: 8px;
     padding: 24px 100px;
@@ -273,9 +268,16 @@ padding-top: 32px;
 
 }
 .icon-item{
-    padding: 12px 12px;
+    display: flex;
     width: 40px;
     height: 40px;
+}
+.icon-team{
+    align-items: center;
+    justify-content: center;
+    padding: 12px 12px;
+    width: 100%;
+    height: 100%;
     background:var(--brand-color);
     border-radius: 50%;
 }
@@ -303,10 +305,14 @@ padding-top: 32px;
     border: 1px solid var(--subtle-text);
     border-radius: 4px;
 }
+.customers-link:hover,.customers-link:focus{
+    fill-opacity:var(--brand-color);
+}
 .customers-icon:not(last-child){
     margin-right: var(--main-margin);
-    
-    
+}
+.customers-brand:hover,.customers-brand:focus{
+  fill:var(--brand-color);
 }
 
 
@@ -370,6 +376,9 @@ color: #E7E9FC;
 .icon-media:not(last-child){
     margin-right: 16px;
 }
+.icon-media:hover,.icon-media:focus{
+    background: #31D0AA;
+}
 /* Portfolio */
 .psection{
    padding-top: 96px;
@@ -425,6 +434,7 @@ letter-spacing: 0.02em;
 
 }
 .link{
+    display: block;
     text-decoration: none;
 }
 .portfolio-list{
@@ -443,6 +453,6 @@ letter-spacing: 0.02em;
     flex-basis: calc((100%/2*24px)-3);
 width: 360px;
 }
-.portfolio:hover{
+.link:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
