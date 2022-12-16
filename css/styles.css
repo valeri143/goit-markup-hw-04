@@ -45,9 +45,10 @@ img{
 .container.head{
    
     display: flex;
-  border-bottom: var(--primary-color);  
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
+  border-bottom: var(--primary-color);
+}
+.shadow{
+    box-shadow: 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .head{
     display: flex;
@@ -117,10 +118,8 @@ text-decoration: none;
     max-width: 1440px;
     height: 603px;
     align-items: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
     background-repeat: no-repeat;
-     background: #2E2F42; 
-    opacity: 70%; 
-    background-image:url(../images/hero.jpg), linear-gradient(#2E2F42 75%, #000000 25%);
     background-size: cover;
 }
 .primary-tittle{
@@ -167,13 +166,20 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     display: flex;
     
 }
-.icon{
+.icon-ability{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 8px;
     padding: 24px 100px;
     width: 264px;
     height: 112px;
     background:var(--light-color);
 border-radius: 4px;
+}
+.icon{
+   width: 64px;
+   height: 64px;
 }
 .abilities.thumb{
     margin-right: var(--main-margin);
@@ -273,9 +279,9 @@ padding-top: 32px;
     height: 40px;
 }
 .icon-team{
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 12px;
     width: 100%;
     height: 100%;
     background:var(--brand-color);
@@ -299,23 +305,29 @@ padding-top: 32px;
     display: flex;
 }
 .customers-brand{
+ width: 104px;
+ height: 56px;  
+}
+.customers-icon:not(last-child){
+    margin-right: var(--main-margin);
+}
+.customers-icon{
     width: 168px;
     height: 88px;
  padding: 16px 32px;
     border: 1px solid var(--subtle-text);
     border-radius: 4px;
 }
-.customers-link:hover,.customers-link:focus{
-    fill-opacity:var(--brand-color);
+.customers-icon:hover, .customers-icon:focus{
+   color: var(--brand-color);
+    border-color: var(--brand-color);
 }
-.customers-icon:not(last-child){
-    margin-right: var(--main-margin);
+.customers-brand{
+    fill: #8E8F99;
 }
 .customers-brand:hover,.customers-brand:focus{
-  fill:var(--brand-color);
+    fill: var(--brand-color);
 }
-
-
 /* footer */
 .end{
     background-color: var(--primary-color);
