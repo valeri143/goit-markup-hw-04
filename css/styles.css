@@ -182,7 +182,6 @@ border-radius: 4px;
    height: 64px;
 }
 .abilities.thumb{
-    margin-right: var(--main-margin);
    margin-bottom: 8px;
     width: 264px;
     color: #2E2F42;
@@ -193,12 +192,14 @@ letter-spacing: 0.02em;
 
 }
 .abilities.paragraph{
-  margin-right: var(--main-margin);
     color:var(--secondary-color);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     
+}
+.icon-ability:not(:last-child){
+    margin-right: var(--main-margin);
 }
 .doing{
     text-align: center;
@@ -287,7 +288,7 @@ padding-top: 32px;
     background:var(--brand-color);
     border-radius: 50%;
 }
-.icon-item:not(last-child){
+.icon-item:not(:last-child){
     margin-right: 24px;
 }
 .apps-item{
@@ -308,7 +309,7 @@ padding-top: 32px;
  width: 104px;
  height: 56px;  
 }
-.customers-icon:not(last-child){
+.customers-icon:not(:last-child){
     margin-right: var(--main-margin);
 }
 .customers-icon{
@@ -318,15 +319,23 @@ padding-top: 32px;
     border: 1px solid var(--subtle-text);
     border-radius: 4px;
 }
-.customers-icon:hover, .customers-icon:focus{
-   color: var(--brand-color);
-    border-color: var(--brand-color);
+.customers-icon:hover,.customers-icon:focus{
+    color: var(--brand-color);
+border-color: var(--brand-color);
 }
 .customers-brand{
     fill: #8E8F99;
 }
+.customers-link{
+    color: #8E8F99;
+    border-color: #8E8F99;
+}
+.customers-link:hover,.customers-link:focus{
+color: var(--brand-color);
+border-color: var(--brand-color);
+}
 .customers-brand:hover,.customers-brand:focus{
-    fill: var(--brand-color);
+    fill: currentColor;
 }
 /* footer */
 .end{
@@ -388,7 +397,10 @@ color: #E7E9FC;
 .icon-media:not(last-child){
     margin-right: 16px;
 }
-.icon-media:hover,.icon-media:focus{
+.icon-media:hover{
+    background: #31D0AA;
+}
+.icon-media:focus{
     background: #31D0AA;
 }
 /* Portfolio */
@@ -464,6 +476,7 @@ letter-spacing: 0.02em;
 .portfolio{
     flex-basis: calc((100%/2*24px)-3);
 width: 360px;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .link:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
