@@ -3,7 +3,7 @@
     --primary-color: #2E2F42;
     --secondary-color:#434455;
     --brand-color:#4D5AE5;
-    --subtle-text:#8E8F99;
+    --subtle-text:#8e8f99;
     --accent-color:#E7E9FC;
     --light-color:#F4F4FD;
     --main-margin:24px;
@@ -198,7 +198,7 @@ letter-spacing: 0.02em;
     letter-spacing: 0.02em;
     
 }
-.icon-ability:not(:last-child){
+.ability-item:not(:last-child){
     margin-right: var(--main-margin);
 }
 .doing{
